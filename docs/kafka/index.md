@@ -1,4 +1,3 @@
-# nerdybros.github.io
 # this is README.md in /docs/kafka home.
 
 [kafka-kafka-concept-home][kafka-concept-home-link] <br/>
