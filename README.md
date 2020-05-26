@@ -3,4 +3,4 @@
 link-test 
 [link keyword][id]
 
-[id]: nerdybros.github.io/docs/docs "docs->"
+[id]: https://nerdybros.github.io/docs/docs "docs->"
