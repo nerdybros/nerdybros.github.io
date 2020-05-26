@@ -1,2 +1,6 @@
 # nerdybros.github.io
-asdasdasdasdasd
+
+link-test 
+[link keyword][id]
+
+[id]: nerdybros.github.io/docs/docs docs->
