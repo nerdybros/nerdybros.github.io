@@ -1,2 +1,0 @@
-# nerdybros.github.io
-docs
