@@ -5,6 +5,6 @@
 [spring-kafka-home][spring-kafka-home-link] <br/>
 
 [comment]: <> (link list)
-[kafka-concept-home-link]: concept/index "kafka concept home comment"
+[kafka-concept-home-link]: theory/index "kafka concept home comment"
 [spring-cloud-stream-home-link]: spring-cloud-stream/index "spring-cloud-stream home comment"
 [spring-kafka-home-link]: spring-kafka/index "spring-kafka home comment"
