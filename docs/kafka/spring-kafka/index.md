@@ -6,5 +6,5 @@ Spring Kafka를 사용해서 다양한 목적의 Producer와 Consumer에 대해 
 [Consumer Home][spring-kafka-consumer-link] <br/>
 
 [comment]: <> (link list)
-[spring-kafka-producer-link]: ./producer/index.md "producer home"
-[spring-kafka-consumer-link]: ./consumer/index.md "consumer home"
+[spring-kafka-producer-link]: producer/index "producer home"
+[spring-kafka-consumer-link]: consumer/index "consumer home"
