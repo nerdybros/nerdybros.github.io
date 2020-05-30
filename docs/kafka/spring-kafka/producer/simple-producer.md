@@ -6,10 +6,13 @@
 ### Producer 설정
 기본적으로 spring-kafka는 `KafkaTemplate`를 활용하여 레코드를 송신합니다.
 
-Kafka 설정은 직접 `Map`에 원하는 Kafka 속성과 값을 `put`해서 사용해서 `KafkaTemplate`을 생성할 수 있으며,
-별도의 `KafkaTemplate` 없이 application 설정 (application.yml 혹은 application.properties)를 통해 주입을 받을 수 있습니다.
+Kafka 설정은 직접 `Map`에 원하는 Kafka 속성과 값을 넣고 `KafkaTemplate`을 생성할 때 활용할 수 있으며,
+application 설정(application.yml 혹은 application.properties)을 통해 라이브러리에서 만들어주는 `KafkaTemplate`에 원하는 속성을 반영하는 방법이 있습니다.
 
-해당 Tutorial에서는 여러 종류의 `KafkaTemplate`을 만들고 선택적으로 사용할 예정이기 때문에 `Map`에 설정을 넣고 `KafkaTemplate`을 생성해보겠습니다.
+물론 설정을 활용하면 소스는 간편해지는 장점이 있지만,
+해당 Tutorial에서는 다양 Kafka 설정의 조합으로 여러개의 `KafkaTemplate`을 만들고 선택적으로 사용할 예정이기 때문에 `Map`에 설정을 넣고 `KafkaTemplate`을 생성해보겠습니다.
+
+중요한 부분은 application.yml을 사용하여 `spring.kafka.producer` 설정을 정의하는 방법도 라이브러리 내부적으로 아래와 같이 동작하기 때문에 내부를 이해하는데 도움이 될거라 생각됩니다.
 ```java
     @Bean(name = "simpleProducerKafkaTemplate")
     public KafkaTemplate<String, String> kafkaTemplate() {
@@ -91,7 +94,7 @@ public class SimpleProducer {
 
 application.yml에서 kafka.topic를 정의하여 토픽명을 변경할 수 있습니다.
 kafka.topic이라는 항목이 없으면 `@Value`에 선언된 것처럼 sample-topic이라는 topic에 송신합니다.
-예시,
+토픽명 설정 예시,
 ```yml
 kafka:
   topic: test-topic
@@ -120,7 +123,7 @@ localhost:8080/producer/simple 호출시 넘겨주는 String 값을 레코드로
 $ `kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic 토픽명`
 
 NOTE
-* 추후에 Consumer에 대해서 배우시면 Consumer를 직접 구현하셔서 테스트를 할 수 있습니다.
+* Consumer Tutorial를 통해 Consumer를 직접 구현해서 테스트 하는 방법도 있습니다.
 
 
 ## 참고 사항
