@@ -5,4 +5,4 @@
 
 [comment]: <> (link list)
 [kafka-home-link]: kafka/index "kafka home comment"
-[markdown-home-link]: markdown/markdown "markdown home comment"
+[markdown-home-link]: markdown/index "markdown home comment"
