@@ -1,8 +1,7 @@
 
 # Simple Producer
 spring-cloud-stream 라이브러리를 이용한 가장 단순한 Kafka Producer 구현 방법입니다.
-
-<br/><br/>
+<br/>
 
 ## pom.xml dependency 추가
 `pom.xml` 파일에 `dependency`를 추가하는 행위는 해당 프로젝트에서 필요한 라이브러리를 연동하겠다는 의미입니다. spring-cloud-stream 라이브러리를 통해 카프카를 사용하기 위해서 다음과 같은 2개의 `dependency`를 `pom.xml` 파일에 추가합니다.
@@ -21,15 +20,13 @@ spring-cloud-stream 라이브러리를 이용한 가장 단순한 Kafka Producer
 	...
 </dependencies>
 ```
-
-<br/><br/>
+<br/>
 
 ## 프로젝트 패키지 구조
 spring-cloud-stream 라이브러리를 사용하여 producer를 구현하기 위해서 interface/class 들을 생성할 필요가 있으며 이해를 돕기 위해 패키지 구조를 다음과 같이 정리하였습니다.<br/>
 
 ![Alt text](https://nerdybros.github.io/resources/kafka/spring-cloud-stream/producer/simple-producer/simple-producer-resource-01.JPG)  
-
-<br/><br/>
+<br/>
 
 ## 주요 코드
 ### SourceBinding.java
@@ -46,8 +43,7 @@ public interface SourceBinding {
 	MessageChannel outputChannel();
 }
 ```
-
-<br/><br/>
+<br/>
 
 ### SimpleProducer.java
 카프카에 메세지를 송신하기 위한 채널을 만들었으니 이제 메세지를 발행하는 역할을 하는 producer를 구현해보도록 하겠습니다. `@EnableBinding` 애너테이션은 통해 SimpleProducer 클래스는 Spring Bean으로 등록됩니다.<br/>
@@ -70,8 +66,7 @@ public class SimpleProducer {
 	}
 }
 ```
-
-<br/><br/>
+<br/>
 
 ### ProducerController.java
 테스트를 위한 RestController 파일을 만들었습니다. Insomnia, PostMan 과 같은 Rest API 테스트용 Tool을 활용하여 테스트를 해보기 위한 클래스입니다.
@@ -98,8 +93,7 @@ public class ProducerController {
 	}
 }
 ```
-
-<br/><br/>
+<br/>
 
 ### application.yml
 spring-cloud-stream 라이브러리를 통해 카프카에 접근할 때 가장 중요한 파일은 설정이 명시되어있는 application.yml 파일입니다. 해당 파일에 현재 Application 이 사용하는 토픽, 파티션, 채널, 기타 카프카 관련 설정이 명시되어야만 정확한 동작이 가능합니다.
@@ -115,7 +109,6 @@ spring:
           brokers:
 					- localhost:9092
 ```
-
-<br/><br/>
+<br/>
 
 ## 테스트 방법
