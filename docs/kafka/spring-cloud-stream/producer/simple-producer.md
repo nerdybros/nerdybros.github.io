@@ -131,11 +131,14 @@ $ `kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic 토픽�
 ### 메세지 전달
 Insomnia Tool을 활용하여 다음과 같은 메세지를 전달합니다.
 
-Insomnia 요청 정보  
+- Insomnia 요청 정보
+
 ![Alt text](https://nerdybros.github.io/resources/kafka/spring-cloud-stream/producer/simple-producer/simple-producer-resource-03.JPG)
 
-spring application log  
+- spring application log
+
 ![Alt text](https://nerdybros.github.io/resources/kafka/spring-cloud-stream/producer/simple-producer/simple-producer-resource-04.JPG)
 
-console consumer log  
+- console consumer log
+
 ![Alt text](https://nerdybros.github.io/resources/kafka/spring-cloud-stream/producer/simple-producer/simple-producer-resource-05.JPG)
