@@ -114,7 +114,7 @@ spring:
 ## 테스트 방법
 ### kafka broker 서버 기동
 카프카 서버를 설치한 폴더로 이동하여 다음과 같은 명령어를 순차적으로 실행합니다. 주의할 사항으로 Linux, Mac 환경에서는 `/bin` 디렉토리, Windows 환경에서는 `/bin/windows` 폴더에서 명령어를 실행해야합니다. <br/>
-$ `zookeeper-server-start.bat ..\..\config\zookeeper.properties`
+$ `zookeeper-server-start.bat ..\..\config\zookeeper.properties` <br/>
 $ `kafka-server-start.bat ..\..\config\server.properties`
 <br/>
 
@@ -131,11 +131,11 @@ $ `kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic 토픽�
 ### 메세지 전달
 Insomnia Tool을 활용하여 다음과 같은 메세지를 전달합니다.
 
-- Insomnia 요청 정보  
+> Insomnia 요청 정보  
 ![Alt text](https://nerdybros.github.io/resources/kafka/spring-cloud-stream/producer/simple-producer/simple-producer-resource-03.JPG)
 
-- spring application log  
+> spring application log  
 ![Alt text](https://nerdybros.github.io/resources/kafka/spring-cloud-stream/producer/simple-producer/simple-producer-resource-04.JPG)
 
-- console consumer log  
+> console consumer log  
 ![Alt text](https://nerdybros.github.io/resources/kafka/spring-cloud-stream/producer/simple-producer/simple-producer-resource-05.JPG)
