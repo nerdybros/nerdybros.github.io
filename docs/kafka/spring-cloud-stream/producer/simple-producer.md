@@ -30,7 +30,7 @@ spring-cloud-stream 라이브러리를 사용하여 producer를 구현하기 위
 
 ## 주요 코드
 ### SourceBinding.java
-spring-cloud-stream 라이브러리는 채널(Channel)이라는 개념을 통해 손쉽게 카프카에 데이터를 송수신할 수 있습니다. producer는 메세지를 송신하는 역할을 하며 `@Output` 이라는 애너테이션을 통해 하나의 메소드를 메세지를 발행할 수 있는 채널을 만들 수 있습니다.
+spring-cloud-stream 라이브러리는 채널(Channel)이라는 개념을 통해 손쉽게 카프카에 데이터를 송수신할 수 있습니다. producer는 메세지를 송신하는 역할을 하며 `@Output` 이라는 애너테이션을 통해 하나의 메소드를 메세지를 발행할 수 있는 채널로 만들 수 있습니다.
 ```java
 import org.springframework.cloud.stream.annotation.Output;
 import org.springframework.messaging.MessageChannel;
@@ -131,11 +131,11 @@ $ `kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic 토픽�
 ### 메세지 전달
 Insomnia Tool을 활용하여 다음과 같은 메세지를 전달합니다.
 
-> Insomnia 요청 정보  
+Insomnia 요청 정보  
 ![Alt text](https://nerdybros.github.io/resources/kafka/spring-cloud-stream/producer/simple-producer/simple-producer-resource-03.JPG)
 
-> spring application log  
+spring application log  
 ![Alt text](https://nerdybros.github.io/resources/kafka/spring-cloud-stream/producer/simple-producer/simple-producer-resource-04.JPG)
 
-> console consumer log  
+console consumer log  
 ![Alt text](https://nerdybros.github.io/resources/kafka/spring-cloud-stream/producer/simple-producer/simple-producer-resource-05.JPG)
