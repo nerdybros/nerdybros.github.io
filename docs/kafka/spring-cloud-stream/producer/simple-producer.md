@@ -106,8 +106,8 @@ spring:
           destination: nerdy-bros # 토픽 이름
       kafka:
         binder:
-					brokers:
-					- localhost:9092
+          brokers:
+          - localhost:9092
 ```
 <br/>
 
