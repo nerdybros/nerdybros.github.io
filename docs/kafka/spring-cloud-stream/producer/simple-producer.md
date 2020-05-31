@@ -25,7 +25,7 @@ spring-cloud-stream 라이브러리를 이용한 가장 단순한 Kafka Producer
 ## 프로젝트 패키지 구조
 spring-cloud-stream 라이브러리를 사용하여 producer를 구현하기 위해서 interface/class 들을 생성할 필요가 있으며 이해를 돕기 위해 패키지 구조를 다음과 같이 정리하였습니다.<br/>
 
-![Alt text](https://nerdybros.github.io/resources/kafka/spring-cloud-stream/producer/simple-producer/simple-producer-resource-01.JPG)  
+![Alt text](https://nerdybros.github.io/resources/kafka/spring-cloud-stream/producer/simple-producer/simple-producer-resource-01.JPG)
 <br/>
 
 ## 주요 코드
@@ -112,3 +112,29 @@ spring:
 <br/>
 
 ## 테스트 방법
+### kafka broker 서버 기동
+카프카 서버를 설치한 폴더로 이동하여 다음과 같은 명령어를 순차적으로 실행합니다. 주의할 사항으로 Linux, Mac 환경에서는 `/bin` 디렉토리, Windows 환경에서는 `/bin/windows` 폴더에서 명령어를 실행해야합니다.
+$ `zookeeper-server-start.bat ..\..\config\zookeeper.properties`
+$ `kafka-server-start.bat ..\..\config\server.properties`
+<br/>
+
+### spring application 기동
+spring application 기동시 다음과 같은 카프카 설정 로그와 함께 나오며 서버가 동작됩니다.
+![Alt text](https://nerdybros.github.io/resources/kafka/spring-cloud-stream/producer/simple-producer/simple-producer-resource-02.JPG)
+<br/>
+
+### kafka console consumer 기동
+원래는 command 를 이용하여 토픽을 생성해야 하지만 spring application 동작시 필요한 토픽이 자동으로 생성되기 때문에 해당 내용은 스킵하였습니다. 
+$ `kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic 토픽명`
+<br/>
+
+### 메세지 전달
+Insomnia Tool을 활용하여 다음과 같은 메세지를 전달합니다.
+- Insomnia 요청 정보
+![Alt text](https://nerdybros.github.io/resources/kafka/spring-cloud-stream/producer/simple-producer/simple-producer-resource-03.JPG)
+
+- spring application log
+![Alt text](https://nerdybros.github.io/resources/kafka/spring-cloud-stream/producer/simple-producer/simple-producer-resource-04.JPG)
+
+- console consumer log
+![Alt text](https://nerdybros.github.io/resources/kafka/spring-cloud-stream/producer/simple-producer/simple-producer-resource-05.JPG)
